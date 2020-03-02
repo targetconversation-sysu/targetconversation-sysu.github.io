@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Open Graph Related Stuff-->
+    <meta property="og:title" content="Target-Guided Open-Domain Conversation" />
+    <meta property="og:url" content="https://github.com/squareRoot3/Target-Guided-Conversation" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="Target-Guided Open-Domain Conversation" />
+    <title>Target-Guided Open-Domain Conversation</title>
+    <script src="/static/js/vendor/jquery.js"></script>
+    <script src="/static/js/jquery-2.1.3.min.js"></script>
+    <link rel="shortcut icon" href="/static/img/favicon2.png">
+    <link rel="stylesheet" href="/static/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.183a8f.css" media="screen,projection">
+
+</head>
+
+<body class="off-canvas hide-extras" style="min-width:1000px; min-height:500px;">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Target-Guided Open-Domain Conversation</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/download/">Dataset</a>
+              </li>
+              <!--<li>
+                <a href="/evaluation">Evaluation</a>
+              </li>-->
+              <li>
+                <a href="/demo/">Demo</a>
+              </li>
+             <li>
+                <a href="/people/">People</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="http://www.sysu.edu.cn/2012/cn/index.htm">
+                  <img style="height:25px;" src="/static/img/logo.png">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cmu.edu/">
+                  <img style="height:25px;" src="/static/img/cmu_logo.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- <header>
+        <div class="row">
+            <a href="https://github.com/squareRoot3/Target-Guided-Conversation"><img style="height: 100px; position:absolute; top:4px; left:0px;"
+                    src="/static/img/main.png" alt="logo" /></a>
+            <h1><img style="height: 90px;" src="/static/img/logo.png" alt="logo" /><br></h1>
+            <br>
+        </div>
+    </header>
+    <div class="contain-to-grid">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
+                </li>
+            </ul>
+            <section class="top-bar-section">
+                <ul class="center">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/people/">People</a></li>
+                    <li><a href="/code/">Code</a></li>
+                    <li><a href="https://github.com/squareRoot3/Target-Guided-Conversation"
+                            onClick="ga('send', 'event', { eventCategory: 'Outgoing Link', eventAction: 'Demo', eventLabel: 'Demo'});">Demo</a>
+                    </li>
+                    <li class="has-dropdown"><a href="/download/">Download</a>
+                        <ul class="dropdown">
+                            <li><a href="/download/">TOC: Target-Guided Open-Domain Conversation v2</a></li>
+                            <li><a href="vqa_v1_download.html">TOC: Target-Guided Open-Domain Conversation v1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/evaluation/">Evaluation</a></li>
+                    <li><a href="/sponsors/">Sponsors</a></li>
+                    <li><a href="/terms/">Terms</a></li> 
+                    <li><a href="/external/">External</a></li>
+                </ul>
+            </section>
+        </nav>
+    </div>-->
+    <section role="main">
+        <div class="row">
+            <div class="large-12 columns">
+                <!-- <p style="text-align: center; font-size:30px; margin-top:-20px">TOC: Target-Guided Open-Domain Conversation Challenge 2019 launched!</p>
+                <p style="text-align: center; font-size:22px; margin-top:-20px">For more details, see <a href="challenge.html">challenge page</a>.</p> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-7 columns" style="padding-left: auto;">
+                <div class="row">
+                    <br>
+                    <h1 style="font-size:20px; color:grey; font-weight: 200;" align=left>What is Target-Guided Open-Domain Conversation?</h1>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns"
+                        style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                        <p style="margin: 0 0px 1em;font-size:15px; font-weight: 200;" align=justify>&emsp;Many practical open-domain dialogue applications have specific goals to achieve, e.g., psychotherapy, education, recommendation. 
+                            <br>&emsp;To bridge the gap between open-domain chit-chat and task-oriented dialogue, we propose a new task called **<b> target-guided open-domain conversation </b>**. 
+                            <br>&emsp;Given a target and a starting utterance of the conversation, an agent is asked to chat with a user starting from an arbitrary topic, and proactively guide the conversation to the target.</p>
+                        
+                    </div>
+                    <!--                     <div id="tot" class="large-1 columns" style="margin-left:-113px; margin-top: 5px;">
+                        <p style="font-family:courier new; font-size:32px; font-weight: 100;" align=left>
+                            <br>
+                            <br><span style="font-weight: 100">}</span></p>
+                        <div style="width: 200px; margin-left: 15px; margin-top: -73px;"><span style="font-size:13px; font-weight: 200;">       9,934,119 total</span></div>
+                    </div> 
+                    <div class="large-12 columns">
+                        <p style="margin: 0 0px 1em;font-size:15px; font-weight: 200;" align=justify>
+                            <a style="color: skyblue;"href="https://github.com/squareRoot3/Target-Guided-Conversation"><b>Subscribe</b></a>
+                            to our group for updates!</p>
+                    </div>-->
+                </div>
+            </div>
+            <div class="large-5 columns">
+                <div class="row">
+                    <br>
+                    <h1 style="margin: 0em 1em 1em;font-size:20px; color:grey; font-weight: 200;" align=left>Dataset</h1>
+                </div>
+                <div class="large-12 columns" style="margin-left:auto">
+                    <p style="margin: -10px 0em 1em;font-size:15px; font-weight: 200; "align=justify>&emsp;Details on downloading the latest
+                        dataset may be found on the <a href="/download/">dataset download webpage</a>.
+                    <br>&emsp;We have derived two keyword-augmented conversation datasets for the study:
+                    <!--<br>&emsp;- a English TGODC dataset from the persona-chat corpus[1]
+                    <br>&emsp;- a Chinese TGODC dataset from the Weibo corpus[2]-->
+                    </p>
+                </div>
+                <div class="large-12 columns"
+                    style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                    <ul class="unilist">
+                        <!--<li>
+                            <br>
+                            <p style="margin: -10px 0em 0em;font-size:14px; font-weight: 600; " align=justify>An English TGODC dataset from the persona-chat corpus</p>
+                        </li>-->
+                        <li>
+                            <a href="javascript:void(0)" id="English"><span id="plus2" style="font-size:20px;"
+                                    class="unibull">&#8853;</span></a>
+                            <p style="margin: -20px 0 0em;font-size:14px; font-weight: 600; display: inline;" align=justify>An English TGODC dataset from the persona-chat corpus</p>
+                        </li>
+                    </ul>
+                    <div class="large-12 columns">
+                        <!--<div class="row" style="font-size:14px; font-weight:400; margin-top: -30px; padding-right: 1em;"
+                            align=justify>Balanced Real Images
+                            <br> </div>-->
+                        <div class="row">
+                            <div class="large-12 columns" style="display: none;margin: -5px 0 0em;" id="hiddenText22">
+                                <ul style="font-size:13px; font-weight: 200; " align=justify>
+                                    <li>8,939 train conversations, 500 val conversations, 500 test conversations</li>
+                                    <li>101,935 train utterances, 5,602 val utterances, 5,317 test utterances</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-5 columns">
+                        <!--                         <div class="row" style="font-size:14px; font-weight:400; margin-top: -20px; " id="hiddenText11" align=justify>Balanced Binary Abstract Scenes </div>
+
+                        <div class="row">
+                            <div class="large-11 columns" id="hiddenText12">
+                                <ul style="font-size:12px; font-weight:200;">
+                                    <li>31,325 abstract scenes<br>(only train/val)
+                                        <li>33,383 questions</li>
+                                        <li>333,830 ground truth answers</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="large-4 columns" style="left: 40px;">
+                    </div>
+                </div>
+                <div class="large-12 columns"
+                    style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                    <ul class="unilist">
+                        <li>
+                            <a href="javascript:void(0)" id="Chinese"><span id="plus1" style="font-size:20px;"
+                                    class="unibull">&#8853;</span></a>
+                            <p style="margin: -20px 0 0em;font-size:14px; font-weight: 600; display: inline;" align=justify>A Chinese TGODC dataset from the Weibo corpus</p>
+                        </li>
+                    </ul>
+                    <div class="large-12 columns">
+                        <!--<div class="row" style="font-size:14px; font-weight:400; margin-top: -30px; padding-right: 1em;"
+                            align=justify>Balanced Real Images
+                            <br> </div>-->
+                        <div class="row">
+                            <div class="large-12 columns" style="display: none;margin: -5px 0 0em;" id="hiddenText12">
+                                <ul style="font-size:13px; font-weight: 200; " align=justify>
+                                    <li>824,742 train conversations, 45,824 val conversations, 45,763 test conversations</li>
+                                    <li>1,104,438 train utterances, 60,893 val utterances, 60,893 test utterances</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-5 columns" style="left: 40px;">
+                        <!--                         <div class="row" style="font-size:14px; font-weight:400; margin-top: -20px;" id="hiddenText13" align=justify>Abstract Scenes
+                            <br> (same as v1.0 release)</div>
+                        <div class="row">
+                            <div class="large-11 columns" id="hiddenText14">
+                                <ul style="font-size:12px; font-weight:200;">
+                                    <li>50,000 abstract scenes</li>
+                                    <li>150,000 questions</li>
+                                    <li>1,500,000 ground truth answers</li>
+                                    <li>450,000 plausible answers</li>
+                                    <li>250,000 captions</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="large-12 columns">
+                    <h1 style="font-size:30px; color:grey; font-weight: 200;" align=justify>Papers</h1>
+                    <p style="font-size:20px; font-weight: 200;" align=justify>Dynamic Knowledge Routing Network For
+                                 Target-Guided Open-Domain Conversation (AAAI 2020)</p>
+                    <br>
+                    <div class="large-3 columns">
+                        <a href="https://arxiv.org/pdf/2002.01196.pdf"><img src="/static/img/paper_toc2.png" height="400" width="200"
+                                    style="margin: 0 2px 1em;border : 2px solid #b3b3b3; border-radius : 0px; height: 280px;"></a>
+                        <br>
+                        <p style="margin: 0 45px 1em;font-size:15px; font-weight: 200;" align=justify>  [<a href="/static/bibtex/toc_v2.bib"> Bibtex </a>]&emsp;[<a href="https://arxiv.org/pdf/2002.01196.pdf"> PDF </a>] </p>
+                        </p>
+                    </div>
+                    <div class="large-9 columns" style="left: 0em; top: -1em;">
+                        <img src="/static/img/toc2_example.png" height="700" width="800"
+                            style="display:block; margin:auto;"align=justify frameBorder="0">
+                    </div>
+                    <!-- <hr> -->
+                </div>
+                <div class="large-12 columns">
+                    <h1 style="font-size:20px; color:grey; font-weight: 200;" align=justify></h1>
+                    <p style="font-size:20px; font-weight: 200;" align=justify>Target-Guided Open-Domain Conversation (ACL 2019)</p>
+                    <br>
+                    <div class="large-3 columns">
+                        <a href="https://arxiv.org/pdf/1905.11553.pdf"><img src="/static/img/paper_toc1.png" height="400" width="200"
+                                style="margin: 0 2px 1em;border : 2px solid #b3b3b3; border-radius : 0px; height: 280px;"align=justify></a>
+                        <br>
+                        <p style="margin: 0 15px 1em;font-size:15px; font-weight: 200;" align=justify>[<a href="/static/bibtex/toc_v1.bib"> Bibtex </a>]&emsp;[<a href="https://arxiv.org/pdf/1905.11553.pdf"> PDF </a>]&emsp;[<a href="https://github.com/squareRoot3/Target-Guided-Conversation"> Code </a>]</p>
+                    </div>
+                    <div class="large-9 columns" style="left: 0em; top: -1em;">
+                        <img src="/static/img/toc1_example.png" height="700" width="800"
+                            style="display:block; margin:auto;" frameBorder="0">
+                    </div>
+                    <!-- <hr> -->
+                </div>
+            </div>
+            <hr>
+            <!-- <div class="row">
+                <div class="large-12 columns">
+                    <h1 style="font-size:30px; color:grey; font-weight: 200;" align=left>Videos</h1>
+                    <div class="auto-resizable-iframe">
+                        <div class="large-2 columns" style="margin-left: 0px; left: -250px; width: 400px;">
+                            <iframe frameborder="0" allowfullscreen=""
+                                src="https://www.youtube.com/embed/nMr_sSAMpkE"></iframe>
+                        </div>
+                        <div class="large-2 columns" style="margin-left: -250px; left: -54px; width: 400px;">
+                            <iframe frameborder="0" allowfullscreen=""
+                                src="https://www.youtube.com/embed/gar88i-V0RE"></iframe>
+                        </div>
+                        <div class="large-2 columns" style="margin-left: -350px; left: 200px; width: 400px;">
+                            <iframe frameborder="0" allowfullscreen=""
+                                src="https://www.youtube.com/embed/Qw4tqz1diM4"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>-->
+            <div class="row">
+                <h1 style="font-size:30px; color:grey; font-weight: 200;margin: 0 25px 10px">Acknowledgements</h1>
+                <div class="large-12 columns" style="text-align:left;">
+                    <p style="font-size:15px; font-weight: 200; text-align:left;margin: 0 13px 1em">This work was supported by the National Natural Science Foundation of China (NSFC) under Grant No.61976233.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <!--<div class="row">
+                <h1 style="font-size:30px; color:grey; font-weight: 200">Sponsors</h1>
+                <div class="row">
+                    <hr>
+                    <h1 style="font-size:30px; color:grey; font-weight: 200">Company</h1>
+                    <div class="large-12 columns">
+                        <img src="/static/img/DMAI_logo.jpg" style="width:280px; height:280px;">
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
+                        <hr>
+                        <h1 style="font-size:30px; color:grey; font-weight: 200">Laboratory</h1>
+                        <div class="large-12 columns">
+                            <img src="/static/img/hcp_logo.jpg" style="width:280px; height:160px;">
+                            <br>
+                        </div>
+                </div>
+            </div>
+            <hr>-->
+            <div class="row">
+                <div class="large-12 columns">
+                    <h1 style="font-size:30px; color:grey; font-weight: 200">Sponsors</h1>
+                    <div class="row">
+                        <div class="col-xs-12 sponsor">
+                          <img style="height:120px;" src="/static/img/DMAI_logo.jpg" />
+                          <img style="height:90px;" src="/static/img/microsoft_logo.png" />
+                          <img style="height:80px;" src="/static/img/petuum_logo.png" />
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <hr>
+            
+            <div class="row">
+                <div class="large-12 columns">
+                    <h1 style="font-size:30px; color:grey; font-weight: 200">Feedback</h1>
+                    <div class="large-12 columns" style="text-align:left;">
+                        <p style="font-size:15px; font-weight: 200;margin: 0 0px 1em">
+                            Any feedback is very welcome! Please send it to <a href="mailto:xdliang328@gmail.com" style="color: skyblue;" target="_top"><b>xdliang328@gmail.com</b></a></a>.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <script>
+        var button = document.getElementById('Chinese'); // Assumes element with id='button'
+        button.onclick = function () {
+            var div1 = document.getElementById('hiddenText12');
+            if (div1.style.display !== 'none') {
+                $("#plus1").html("&#8853");
+                div1.style.display = 'none';
+            } else {
+                $("#plus1").html("&#8854");
+                div1.style.display = 'block';
+            }
+        };
+    </script>
+    <script>
+        var button = document.getElementById('English'); // Assumes element with id='button'
+        button.onclick = function () {
+            var div1 = document.getElementById('hiddenText22');
+            if (div1.style.display !== 'none') {
+                $("#plus2").html("&#8853");
+                div1.style.display = 'none';
+            } else {
+                $("#plus2").html("&#8854");
+                div1.style.display = 'block';
+            }
+        };
+    </script>
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-63638588-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/static/js/foundation.js"></script>
+    <script src="/static/js/foundation.dropdown.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+    <!-- jquery smooth scroll to id's -->
+    <script>
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
