@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Open Graph Related Stuff-->
+    <meta property="og:title" content="Target-oriented Conversation" />
+    <meta property="og:url" content="https://targetconversation-sysu.github.io/" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="Target-oriented Conversation" />
+    <title>Target-oriented Conversation</title>
+    <script src="/static/js/vendor/jquery.js"></script>
+    <script src="/static/js/jquery-2.1.3.min.js"></script>
+    <link rel="shortcut icon" href="/static/img/favicon2.png">
+    <link rel="stylesheet" href="/static/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.183a8f.css" media="screen,projection">
+
+</head>
+
+<body class="off-canvas hide-extras" style="min-width:1000px; min-height:500px;">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Target-oriented Conversation</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li class="active">
+                <a href="/papers">Papers</a>
+              </li>
+              <li>
+                <a href="/dataset">Dataset</a>
+              </li>
+              <li>
+                <a href="/demo">Demo</a>
+              </li>
+             <li >
+                <a href="/people">People</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="http://www.sysu.edu.cn/2012/cn/index.htm">
+                  <img style="height:25px;" src="/static/img/logo.png">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.cmu.edu/">
+                  <img style="height:25px;" src="/static/img/cmu_logo.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row" >
+        <div class="large-12 columns">
+            <h1 style="font-size:30px; color:grey; font-weight: 200;margin-top:0.8em" align=justify>Papers</h1>
+            <p style="font-size:20px; font-weight: 200;" align=justify>Dynamic Knowledge Routing Network For
+                         Target-Guided Open-Domain Conversation (AAAI 2020)</p>
+            <br>
+            <div class="large-3 columns">
+                <a href="https://arxiv.org/pdf/2002.01196.pdf"><img src="/static/img/paper_toc2.png" height="400" width="200"
+                            style="margin: 0 2px 1em;border : 2px solid #b3b3b3; border-radius : 0px; height: 280px;"></a>
+                <br>
+                <p style="margin: 0 45px 1em;font-size:15px; font-weight: 200;" align=justify>  [<a href="/static/bibtex/toc_v2.bib"> Bibtex </a>]&emsp;[<a href="https://arxiv.org/pdf/2002.01196.pdf"> PDF </a>] </p>
+                </p>
+            </div>
+            <div class="large-9 columns" style="left: 0em; top: -1em;">
+                <img src="/static/img/toc2_example.png" height="700" width="800"
+                    style="display:block; margin:auto;"align=justify frameBorder="0">
+            </div>
+            <!-- <hr> -->
+        </div>
+        <div class="large-12 columns">
+            <h1 style="font-size:20px; color:grey; font-weight: 200;" align=justify></h1>
+            <p style="font-size:20px; font-weight: 200;" align=justify>Target-Guided Open-Domain Conversation (ACL 2019)</p>
+            <br>
+            <div class="large-3 columns">
+                <a href="https://arxiv.org/pdf/1905.11553.pdf"><img src="/static/img/paper_toc1.png" height="400" width="200"
+                        style="margin: 0 2px 1em;border : 2px solid #b3b3b3; border-radius : 0px; height: 280px;"align=justify></a>
+                <br>
+                <p style="margin: 0 15px 1em;font-size:15px; font-weight: 200;" align=justify>[<a href="/static/bibtex/toc_v1.bib"> Bibtex </a>]&emsp;[<a href="https://arxiv.org/pdf/1905.11553.pdf"> PDF </a>]&emsp;[<a href="https://github.com/squareRoot3/Target-Guided-Conversation"> Code </a>]</p>
+            </div>
+            <div class="large-9 columns" style="left: 0em; top: -1em;">
+                <img src="/static/img/toc1_example.png" height="700" width="800"
+                    style="display:block; margin:auto;" frameBorder="0">
+            </div>
+            <!-- <hr> -->
+        </div>
+    </div>
+    <hr>
+
+    <script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-63638588-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
