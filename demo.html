@@ -137,7 +137,7 @@
       var text = document.getElementById("userIn").value;
       $.ajax({
         type: "post",  //数据提交方式（post/get）
-        url:"http://127.0.0.1:8000/demo_service/?userIn=" + text,//提交到的url，这里应填写服务器地址
+        url:"http://117.24.207.34:8888/demo_service/?userIn=" + text,//提交到的url，这里应填写服务器地址
         data: { "userIn": text },//提交的数据
         //contentType: "application/json; charset=utf-8",
         dataType: "json",//返回的数据类型格式
