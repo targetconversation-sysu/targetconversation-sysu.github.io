@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Open Graph Related Stuff-->
+    <meta property="og:title" content="TOC:Target-oriented Conversation" />
+    <meta property="og:url" content="https://targetconversation-sysu.github.io/" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="TOC:Target-oriented Conversation" />
+    <title>TOC:Target-oriented Conversation</title>
+    <script src="/static/js/vendor/jquery.js"></script>
+    <script src="/static/js/jquery-2.1.3.min.js"></script>
+    <link rel="shortcut icon" href="/static/img/favicon2.png">
+    <link rel="stylesheet" href="/static/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.183a8f.css" media="screen,projection">
+
+</head>
+
+<body class="off-canvas hide-extras" style="min-width:1000px; min-height:500px;">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Target-oriented Conversation</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/papers">Papers</a>
+                    </li>
+                    <li>
+                        <a href="/dataset">Dataset</a>
+                    </li>
+                    <li>
+                        <a href="/demo">Demo</a>
+                    </li>
+                    <li>
+                        <a href="/people">People</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://www.sysu.edu.cn/2012/cn/index.htm">
+                            <img style="height:25px;" src="/static/img/logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cmu.edu/">
+                            <img style="height:25px;" src="/static/img/cmu_logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section role="main">
+        <div class="row">
+            <div class="large-12 columns">
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns" style="padding-left: auto;">
+                <h1 style="font-size:30px; color:grey; font-weight: 200;margin-top:0.8em;margin-left:-0.2em">Overview
+                </h1>
+
+                <div class="row">
+                    <h1 style="font-size:20px; color:grey; font-weight: 200;" align=left>What is Target-oriented Conversation?</h1>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns"
+                        style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                        <p style="margin: 0 0px 1em;font-size:15px; font-weight: 200;" align=justify>&emsp;Many
+                            practical open-domain dialogue applications have specific goals to achieve, e.g.,
+                            psychotherapy, education, recommendation.
+                            <br>&emsp;To bridge the gap between open-domain chit-chat and task-oriented dialogue, we
+                            propose a new task called **<b> target-guided open-domain conversation </b>**.
+                            Given a target and a starting utterance of the conversation, an agent is asked to
+                            chat with a user starting from an arbitrary topic, and proactively guide the conversation to
+                            the target.</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <div class="row">
+                    <br>
+                    <h1 style="margin: -1.2em 0em 1em 0.35em;font-size:20px; color:grey; font-weight: 200;" align=left>
+                        Dataset</h1>
+                </div>
+                <div class="large-12 columns" style="margin-left:auto">
+                    <p style="margin: -10px 0em 10px -0.8em;font-size:15px; font-weight: 200; " align=justify>&emsp;Details on
+                        downloading the latest
+                        dataset may be found on the <a href="/dataset">dataset download webpage</a>.
+                        <br>&emsp;We have derived two keyword-augmented conversation datasets for the study:
+                    </p>
+                </div>
+                <div class="large-12 columns"
+                    style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                    <ul class="unilist">
+                        <li style="margin-left:2em">
+                            <a href="javascript:void(0)" id="English"><span id="plus2" style="font-size:20px;"
+                                    class="unibull">&#8853;</span></a>
+                            <p style="margin: -20px 0 0em;font-size:14px; font-weight: 600; display: inline;"
+                                align=justify>An English TGODC dataset from the persona-chat corpus</p>
+                        </li>
+                    </ul>
+                    <div class="large-12 columns">
+                        <div class="row">
+                            <div class="large-12 columns" style="display: none;margin-left:2em;" id="hiddenText22">
+                                <ul style="font-size:13px; font-weight: 200; " align=justify>
+                                    <li>8,939 train conversations, 500 val conversations, 500 test conversations</li>
+                                    <li>101,935 train utterances, 5,602 val utterances, 5,317 test utterances</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-5 columns">
+                    </div>
+                    <div class="large-4 columns" style="left: 40px;">
+                    </div>
+                </div>
+                <div class="large-12 columns"
+                    style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                    <ul class="unilist">
+                        <li style="margin-left:2em">
+                            <a href="javascript:void(0)" id="Chinese"><span id="plus1" style="font-size:20px;"
+                                    class="unibull">&#8853;</span></a>
+                            <p style="margin: -20px 0 0em;font-size:14px; font-weight: 600; display: inline;"
+                                align=justify>A Chinese TGODC dataset from the Weibo corpus</p>
+                        </li>
+                    </ul>
+                    <div class="large-12 columns">
+                        <div class="row">
+                            <div class="large-12 columns" style="display: none;margin-left:2em;" id="hiddenText12">
+                                <ul style="font-size:13px; font-weight: 200; " align=justify>
+                                    <li>824,742 train conversations, 45,824 val conversations, 45,763 test conversations
+                                    </li>
+                                    <li>1,104,438 train utterances, 60,893 val utterances, 60,893 test utterances</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-5 columns" style="left: 40px;">
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            
+            <div class="row">
+                <h1 style="font-size:30px; color:grey; font-weight: 200;margin: 0 25px 10px">Acknowledgements</h1>
+                <div class="large-12 columns" style="text-align:left;">
+                    <p style="font-size:15px; font-weight: 200; text-align:left;margin: 0 13px 1em">This work was
+                        supported by the National Natural Science Foundation of China (NSFC) under Grant No.61976233.
+                    </p>
+                </div>
+            </div>
+            <hr>
+
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <h1 style="font-size:30px; color:grey; font-weight: 200">Feedback</h1>
+                    <div class="large-12 columns" style="text-align:left;">
+                        <p style="font-size:15px; font-weight: 200;margin: 0 0px 1em">
+                            Any feedback is very welcome! Please send it to <a href="mailto:xdliang328@gmail.com"
+                                style="color: blue;" target="_top"><b>xdliang328@gmail.com</b></a></a>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="large-12 columns">
+                    <h1 style="font-size:30px; color:grey; font-weight: 200">Sponsors</h1>
+                    <div class="large-12 columns">
+                        <a href="https://www.dm-ai.cn/"><img style="height:150px;"
+                                src="/static/img/DMAI_logo.jpg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.sysu-hcp.net/home/"><img style="height:120px;"
+                                src="/static/img/hcp_logo.jpg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <!--<a href="http://www.sailing.cs.cmu.edu/"><img style="height:120px;"
+                                    src="/static/img/sailing_logo.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;-->
+                        <!--<img style="height:90px;" src="/static/img/microsoft_logo.png" />
+                      <img style="height:80px;" src="/static/img/petuum_logo.png" />-->
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <script>
+        var button = document.getElementById('Chinese'); // Assumes element with id='button'
+        button.onclick = function () {
+            var div1 = document.getElementById('hiddenText12');
+            if (div1.style.display !== 'none') {
+                $("#plus1").html("&#8853");
+                div1.style.display = 'none';
+            } else {
+                $("#plus1").html("&#8854");
+                div1.style.display = 'block';
+            }
+        };
+    </script>
+    <script>
+        var button = document.getElementById('English'); // Assumes element with id='button'
+        button.onclick = function () {
+            var div1 = document.getElementById('hiddenText22');
+            if (div1.style.display !== 'none') {
+                $("#plus2").html("&#8853");
+                div1.style.display = 'none';
+            } else {
+                $("#plus2").html("&#8854");
+                div1.style.display = 'block';
+            }
+        };
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-63638588-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="/static/js/foundation.js"></script>
+    <script src="/static/js/foundation.dropdown.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+    <!-- jquery smooth scroll to id's -->
+    <script>
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
