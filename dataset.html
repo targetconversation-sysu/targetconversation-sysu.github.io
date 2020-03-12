@@ -133,7 +133,8 @@
                             covers rich real-world topics in our daily life, such as shopping, disease, news, etc.
                             <br>&nbsp;&nbsp;&nbsp;&nbsp;We split our data set randomly
                             into three parts: train set (90%), validation set (5%), and
-                            test set (5%). Please follow the instructions in the  
+                            test set (5%). Please download <a href="https://drive.google.com/open?id=1NYBLxkLnGRNv720SLIcQyX7Um6rbxsAc"
+                                                              style="color:blue"><b>the processed data</b><a/> and follow the instructions in the  
                                     <a href="https://github.com/James-Yip/TGODC-DKRN" 
                                     style="color:blue"><b>github</b></a> to setup the conversation
                             data.<br> 
@@ -197,10 +198,11 @@
                             and the discussion topics change frequently during the course of the conversations.
                             <br>&nbsp;&nbsp;&nbsp;&nbsp;We re-split the data into train/valid/test sets, where
                             the test set contains 500 conversations with relatively frequent keywords.
-                            Please follow the instructions in the <a href="https://github.com/squareRoot3/Target-Guided-Conversation" style="color:blue"><b>github</b></a> to download
-                            and setup the 
-                            <a href="https://drive.google.com/file/d/1oTjOQjm7iiUitOPLCmlkXOCbEPoSWDPX/view?usp=sharing">
-                            <b style="color: blue;">raw conversation data</b></a>.<br>
+                            Please download <a href="https://drive.google.com/open?id=1Q4pRpFsxap2vqZ83mmMBpTNPnYpPxLHT"
+                                                              style="color:blue"><b>the processed data</b><a/> and follow the instructions in the  
+                                    <a href="https://github.com/squareRoot3/Target-Guided-Conversation" 
+                                    style="color:blue"><b>github</b></a> to setup the conversation
+                            data.<br> 
                             &nbsp;&nbsp;&nbsp;&nbsp;Here are some details:
                         </p>
                         <div class="large-12 columns">
@@ -268,6 +270,8 @@
                         &nbsp;├── start_corpus.txt<br>
                         &nbsp;├── vocab.txt<br>
                         &nbsp;├── embedding.txt<br>
+                        &nbsp;├── sample_start_corpus.txt<br>
+                        &nbsp;├── target_keywords_for_simulation.txt<br>
                         &nbsp;├── train/<br>
                         &nbsp;|&nbsp;&nbsp;&nbsp;├── context.txt<br>
                         &nbsp;|&nbsp;&nbsp;&nbsp;├── keywords.txt<br>
@@ -302,7 +306,12 @@
                     <code>vocab.txt</code>: vocabory of the dataset
                     <br>
                     <code>embedding.txt</code>: pretrained Glove embedding of the vocabulary
-                    <br><br>
+                    <br>
+                    <code>sample_start_corpus.txt</code>: 5 randomly sampled starting utterances for self-play simulation
+                    <br>
+                    <code>target_keywords_for_simulation.txt</code>: 500 randomly sampled target keywords for self-play simulation
+                    <br>
+                    <br>
                     The following types of txt files exist in all three folders: the train set, the test set and the
                     valid set:
                     <br><br>
@@ -310,7 +319,7 @@
                     <br>
                     <code>keywords.txt</code>: extracted keywords in the next utterance
                     <br>
-                    <code>keywords_vocab.txt</code>: vocabulary of keywords in the train set
+                    <code>keywords_vocab.txt</code>: vocabulary of keywords in the corresponding set
                     <br>
                     <code>label.txt</code>: label of the right resonse
                     <br>
