@@ -8,7 +8,7 @@
   <meta property="og:url" content="https://targetconversation-sysu.github.io/" />
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="TOC:Target-oriented Conversation" />
-  <title>TOC:Target-oriented Conversation</title>
+  <title>TOC: Target-oriented Conversation</title>
   <script src="/static/js/vendor/jquery.js"></script>
   <script src="/static/js/jquery-2.1.3.min.js"></script>
   <link rel="shortcut icon" href="/static/img/favicon2.png">
@@ -62,38 +62,61 @@
     </div>
   </div>
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <div class="large-12 columns" style="margin-left:3em">
-        <h1 style="font-size:30px; color:grey; font-weight: 200;margin-top:1.2em;margin-left:1.8em">Instruction</h1>
-    </div>
-    <div class="row" style="margin-left:3em">
-      <div class="large-12 columns"
-          style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
-          <p style="margin: 0 4em 1em;font-size:15px; font-weight: 200;" align=justify>
-            &emsp;In this part, we will put a video to show the Demo process.
-             In the demonstration, if you send messages to the bot, it will chat with you to arrive a target. 
-             (P.S. Temporarily unavailable. It'll be deployed on the server soon)
-              </p>
-
-      </div>
-
+  <div class="large-12 columns" style="margin-left:3em">
+    <h1 style="font-size:30px; color:grey; font-weight: 200;margin-top:1.2em;margin-left:1.8em">Instruction</h1>
   </div>
-<hr>
-<div class="row" style="margin-left:3.2em">
-  <div class="large-12 columns">
+  <div class="row" style="margin-left:3em">
+    <div class="large-12 columns"
+      style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+      <p style="margin: 0 4em 1em;font-size:15px; font-weight: 200;" align=justify>
+        &emsp;In this part, we put two videos below to show the process for using two versions of our demo.
+        <br>&emsp;If you want to use our demo in the demonstration,
+        please select or change the version, after that the bot will send the first message.
+        Then if you send to the bot, it will chat with you to arrive a target. Sometimes you may
+        wait a moment for the response.
+        <br>&emsp;When the bot arrives the target, it outputs the result simultaneously. For example:
+        <br>&emsp;<br>&emsp;(1) [SUCCESS] target: '{...}'.
+        <br>&emsp;<br>&emsp;(2) [FAIL] out of the max dialogue turns, target: '{...}'.
+        <br>&emsp;<br>&emsp;Then you can't send more, please click on "Restart Conversation" to clear and restart
+        the dialog box.
+        <br>&emsp;If you have any questions, please contact us!
+        <br>&emsp;P.S. Temporarily unavailable. It'll be deployed on the server soon.
+      </p>
+    </div>
+  </div>
+  <hr>
+  <div class="row" style="margin-left:3.2em">
+    <div class="large-12 columns">
       <h1 style="font-size:30px; color:grey; font-weight: 200;margin-left:2em" align=left>Video</h1>
       <div class="auto-resizable-iframe">
-          <div class="large-12 columns" style="margin:4em 0em 2em 15em;width: 500px;">
-              <!--<iframe frameborder="0" allowfullscreen="" 
-              src="https://www.youtube.com/embed/nMr_sSAMpkE"></iframe>-->
-          </div>
+        <div class="large-2 columns" style="margin-left: 0px;margin-top:4em;width: 400px;">
+          <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/Chinese_Version"></iframe>
+        </div>
+        <div class="large-2 columns" style="margin-left: 400px; margin-top:-12.1em;width: 400px;">
+          <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/English_Version"></iframe>
+        </div>
       </div>
+    </div>
   </div>
-</div>
-<hr>
+  <br>
+  <hr>
   <h1 style="font-size:30px; color:grey; font-weight: 200;margin-left:3.2em">Demonstration</h1>
   <div class="columns" style="height: 100%;">
     <div class="column is-three-fifths is-offset-one-fifth">
-      <section class="hero is-info is-large has-background-light has-text-grey-dark" style="height: 100%;margin-top:2.5em">
+      <select class="form-control" id='chatbot_select'>
+        <option selected="selected" disabled="disabled" style='display: none' value='default'>Please select the chat
+          bot
+          version, Chinese and English are available.</option>
+        <option value="The Chinese Version" style="font-size: 13px;color: #666666;">&nbsp;&nbsp;&nbsp;&nbsp;The
+          Chinese
+          Version</option>
+        <option value="The English Version" style="font-size: 13px;color: #666666;">&nbsp;&nbsp;&nbsp;&nbsp;The
+          English
+          Version</option>
+      </select>
+
+      <section class="hero is-info is-large has-background-light has-text-grey-dark"
+        style="height: 100%;margin-top:2.5em;display: None;" id='English_chatbot'>
         <div id="parent" class="hero-body"
           style="overflow: auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0em;">
           <article class="media">
@@ -102,7 +125,7 @@
                 <p>
                   <strong>Instructions</strong>
                   <br>
-                  Enter a message, and the model will respond interactively.
+                  Enter an English message, and the model will respond interactively.
                 </p>
               </div>
             </div>
@@ -114,15 +137,16 @@
             <div class="field is-grouped">
               <p class="control is-expanded">
                 <input for="userIn" style="font-size: 1em;margin-left: -11em;width: 42em;" class="input" type="text"
-                  name="userIn" id="userIn" placeholder="Type in a message">
+                  name="userIn" id="userIn" placeholder="Type in an English message">
               </p>
               <p class="control">
-                <input id="respond" style="margin-left: -11em;" onclick="ajax_submit();" type="button" value="submit"
+                <input id="respond" style="margin-left: -11em;padding-left: 2.8em;padding-right: 2.8em;"
+                  onclick="ajax_submit();" type="button" value="Send"
                   class="button has-text-white-ter has-background-grey-dark">
                 </input>
               </p>
               <p class="control">
-                <button id="restart" style="margin-left: -5.5em;" type="reset"
+                <button id="restart" style="margin-left: -4em;padding-left: 2.8em;padding-right: 2.8em;" type="reset"
                   class="button has-text-white-ter has-background-grey-dark">
                   Restart Conversation
                 </button>
@@ -131,27 +155,177 @@
           </form>
         </div>
       </section>
+
+      <section class="hero is-info is-large has-background-light has-text-grey-dark"
+        style="height: 100%;margin-top:2.5em;display: None;" id='Chinese_chatbot'>
+        <div id="Chinese_parent" class="hero-body"
+          style="overflow: auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0em;">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Instructions</strong>
+                  <br>
+                  Enter a Chinese message, and the model will respond interactively.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="hero-foot column is-three-fifths is-offset-one-fifth" style="height: 76px">
+
+          <form id="Chinese_interact">
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input for="userIn" style="font-size: 1em;margin-left: -11em;width: 42em;" class="input" type="text"
+                  name="userIn" id="Chinese_userIn" placeholder="Type in a Chinese message">
+              </p>
+              <p class="control">
+                <input id="Chinese_respond" style="margin-left: -11em;padding-left: 2.8em;padding-right: 2.8em;"
+                  onclick="Chinese_ajax_submit();" type="button" value="Send"
+                  class="button has-text-white-ter has-background-grey-dark">
+                </input>
+              </p>
+              <p class="control">
+                <button id="Chinese_restart" style="margin-left: -4em;padding-left: 2.8em;padding-right: 2.8em;"
+                  type="reset" class="button has-text-white-ter has-background-grey-dark">
+                  Restart Conversation
+                </button>
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+
     </div>
   </div>
-  <br><br><hr>
-  <script type="text/javascript">
+  <br><br>
+  <hr>
+  <script type="text/javascript" language="javascript">
+    var dialog_history = [];
+    $('#chatbot_select').on('change', function () {
+      dialog_history = [];
+      var text = document.getElementById("chatbot_select").value;
+      if (text == "The English Version") {
+        dialog_history = [];
+        var English_chatbot = document.getElementById("English_chatbot");
+        var Chinese_chatbot = document.getElementById("Chinese_chatbot");
+        English_chatbot.style.display = "";
+        Chinese_chatbot.style.display = "None";
+        document.getElementById('userIn').value = "";
+        var parDiv = document.getElementById("parent");
+        parDiv.innerHTML = '';
+        parDiv.append(createChatRow("Instructions", "Enter an English message, and the model will respond interactively."));
+        parDiv.scrollTo(0, parDiv.scrollHeight);
+
+        var dialog_history_json = JSON.stringify(dialog_history);
+        $.ajax({
+          type: "post",  //数据提交方式（post/get）
+          url: "http://172.18.167.4:8080/English_chatbot_api/",  //提交到的url，这里应填写服务器地址
+          data: { "userIn": dialog_history_json },//提交的数据
+          dataType: "json",
+          traditional: true,
+          beforeSend: function () {
+            document.getElementById('userIn').value = "";
+            var parDiv = document.getElementById("parent");
+            parDiv.innerHTML += '<article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article>';
+          }, //等待动画
+          success: function (data) {
+            // Change info for Model response
+            $('#load').remove();
+            var parDiv = document.getElementById("parent");
+            // Change info for Model response
+
+            dialog_history.push(data.modelOut[0]);
+            parDiv.append(createChatRow("Model", data.modelOut));
+            parDiv.scrollTo(0, parDiv.scrollHeight);
+          },
+          error: function () {
+            $('#load').remove();
+            alert("ERROR!");
+          }
+        })
+      }
+      if (text == "The Chinese Version") {
+        var Chinese_chatbot = document.getElementById("Chinese_chatbot");
+        var English_chatbot = document.getElementById("English_chatbot");
+        Chinese_chatbot.style.display = "";
+        English_chatbot.style.display = "None";
+        dialog_history = [];
+        document.getElementById('Chinese_userIn').value = "";
+        var parDiv = document.getElementById("Chinese_parent");
+        parDiv.innerHTML = '';
+        parDiv.append(Chinese_createChatRow("Instructions", "Enter a Chinese message, and the model will respond interactively."));
+        parDiv.scrollTo(0, parDiv.scrollHeight);
+
+        var dialog_history_json = JSON.stringify(dialog_history);
+        $.ajax({
+          type: "post",  //数据提交方式（post/get）
+          url: "http://172.18.167.4:8080/Chinese_chatbot_api/",//提交到的url，这里应填写服务器地址
+          data: { "userIn": dialog_history_json },//提交的数据
+          //contentType: "application/json; charset=utf-8",
+          dataType: "json",//返回的数据类型格式
+          traditional: true,
+          beforeSend: function () {
+            document.getElementById('Chinese_userIn').value = "";
+            var parDiv = document.getElementById("Chinese_parent");
+            parDiv.innerHTML += '<article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article>';
+          }, //等待动画
+          success: function (data) {
+            // Change info for Model response
+            $('#load').remove();
+            var parDiv = document.getElementById("Chinese_parent");
+            // Change info for Model response
+
+            dialog_history.push(data.modelOut[0]);
+            parDiv.append(Chinese_createChatRow("Model", data.modelOut));
+            parDiv.scrollTo(0, parDiv.scrollHeight);
+          },
+          error: function () {
+            $('#load').remove();
+            alert("ERROR!");
+          }
+        })
+      }
+
+    })
+
+    //英文版本的聊天机器人
+
     function ajax_submit() {
       var text = document.getElementById("userIn").value;
+      dialog_history.push(text);
+      var dialog_history_json = JSON.stringify(dialog_history);
       $.ajax({
         type: "post",  //数据提交方式（post/get）
-        url:"http://117.24.207.34:8888/demo_service/?userIn=" + text,//提交到的url，这里应填写服务器地址
-        data: { "userIn": text },//提交的数据
+        url: "http://172.18.167.4:8080/English_chatbot_api/",//提交到的url，这里应填写服务器地址
+        data: { "userIn": dialog_history_json },//提交的数据
         //contentType: "application/json; charset=utf-8",
         dataType: "json",//返回的数据类型格式
-        success: function (data) {
+        traditional: true,
+        beforeSend: function () {
           document.getElementById('userIn').value = "";
           var parDiv = document.getElementById("parent");
           parDiv.append(createChatRow("You", text));
+          parDiv.innerHTML += '<article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article>';
+        }, //等待动画
+        success: function (data) {
           // Change info for Model response
-          parDiv.append(createChatRow("Model", data.modelOut));
+          $('#load').remove();
+          var parDiv = document.getElementById("parent");
+          var i;
+          for (i = 0; i < data.modelOut.length; i++) {
+            dialog_history.push(data.modelOut[i]);
+            parDiv.append(createChatRow("Model", data.modelOut[i]));
+          }
+          if (data.modelOut.length > 1) {
+            dialog_history = [];
+          }
+
           parDiv.scrollTo(0, parDiv.scrollHeight);
         },
         error: function () {
+          $('#load').remove();
           alert("ERROR!");
         }
       })
@@ -200,11 +374,159 @@
         document.getElementById('userIn').value = "";
         var parDiv = document.getElementById("parent");
         parDiv.innerHTML = '';
-        parDiv.append(createChatRow("Instructions", "Enter a message, and the model will respond interactively."));
+        dialog_history = [];
+        parDiv.append(createChatRow("Instructions", "Enter an English message, and the model will respond interactively."));
         parDiv.scrollTo(0, parDiv.scrollHeight);
+        var dialog_history_json = JSON.stringify(dialog_history);
+        $.ajax({
+          type: "post",  //数据提交方式（post/get）
+          url: "http://172.18.167.4:8080/English_chatbot_api/",//提交到的url，这里应填写服务器地址
+          data: { "userIn": dialog_history_json },//提交的数据
+          //contentType: "application/json; charset=utf-8",
+          dataType: "json",//返回的数据类型格式
+          traditional: true,
+          beforeSend: function () {
+            document.getElementById('userIn').value = "";
+            var parDiv = document.getElementById("parent");
+            parDiv.innerHTML += '<article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article>';
+          }, //等待动画
+          success: function (data) {
+            // Change info for Model response
+            $('#load').remove();
+            var parDiv = document.getElementById("parent");
+            // Change info for Model response
+
+            dialog_history.push(data.modelOut[0]);
+            parDiv.append(createChatRow("Model", data.modelOut));
+            parDiv.scrollTo(0, parDiv.scrollHeight);
+          },
+          error: function () {
+            $('#load').remove();
+            alert("ERROR!");
+          }
+        })
+      }
+    });
+
+    //中文版本的聊天机器人
+    function Chinese_ajax_submit() {
+      var text = document.getElementById("Chinese_userIn").value;
+      dialog_history.push(text);
+      var dialog_history_json = JSON.stringify(dialog_history);
+      $.ajax({
+        type: "post",  //数据提交方式（post/get）
+        url: "http://172.18.167.4:8080/Chinese_chatbot_api/",//提交到的url，这里应填写服务器地址
+        data: { "userIn": dialog_history_json },//提交的数据
+        //contentType: "application/json; charset=utf-8",
+        dataType: "json",//返回的数据类型格式
+        traditional: true,
+        beforeSend: function () {
+          document.getElementById('Chinese_userIn').value = "";
+          var parDiv = document.getElementById("Chinese_parent");
+          parDiv.append(Chinese_createChatRow("You", text));
+          parDiv.innerHTML += '<article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article>';
+        }, //等待动画
+        success: function (data) {
+          // Change info for Model response
+          $('#load').remove();
+          var parDiv = document.getElementById("Chinese_parent");
+          var i;
+          for (i = 0; i < data.modelOut.length; i++) {
+            dialog_history.push(data.modelOut[i]);
+            parDiv.append(Chinese_createChatRow("Model", data.modelOut[i]));
+          }
+          if (data.modelOut.length > 1) {
+            dialog_history = [];
+          }
+
+          parDiv.scrollTo(0, parDiv.scrollHeight);
+        },
+        error: function () {
+          $('#load').remove();
+          alert("ERROR!");
+        }
+      })
+
+    }
+    function Chinese_createChatRow(agent, text) {
+      {
+        var article = document.createElement("article");
+        article.className = "media"
+        var figure = document.createElement("figure");
+        figure.className = "media-left";
+        var span = document.createElement("span");
+        span.className = "icon is-large";
+        var icon = document.createElement("i");
+        icon.className = "fas fas fa-2x" + (agent === "You" ? " fa-user " : agent === "Model" ? " fa-robot" : "");
+        var media = document.createElement("div");
+        media.className = "media-content";
+        var content = document.createElement("div");
+        content.className = "content";
+        var para = document.createElement("p");
+        var paraText = document.createTextNode(text);
+        var strong = document.createElement("strong");
+        strong.innerHTML = agent;
+        var br = document.createElement("br");
+        para.appendChild(strong);
+        para.appendChild(br);
+        para.appendChild(paraText);
+        content.appendChild(para);
+        media.appendChild(content);
+        span.appendChild(icon);
+        figure.appendChild(span);
+        if (agent !== "Instructions") {
+          {
+            article.appendChild(figure);
+          }
+        };
+        article.appendChild(media);
+        return article;
+      }
+    }
+
+    document.getElementById("Chinese_interact").addEventListener("reset", function (event) {
+      {
+        event.preventDefault()
+        var text = document.getElementById("Chinese_userIn").value;
+        document.getElementById('Chinese_userIn').value = "";
+        var parDiv = document.getElementById("Chinese_parent");
+        parDiv.innerHTML = '';
+        dialog_history = [];
+        parDiv.append(Chinese_createChatRow("Instructions", "Enter a Chinese message, and the model will respond interactively."));
+        parDiv.scrollTo(0, parDiv.scrollHeight);
+        var dialog_history_json = JSON.stringify(dialog_history);
+        $.ajax({
+          type: "post",  //数据提交方式（post/get）
+          url: "http://172.18.167.4:8080/Chinese_chatbot_api/",//提交到的url，这里应填写服务器地址
+          data: { "userIn": dialog_history_json },//提交的数据
+          //contentType: "application/json; charset=utf-8",
+          dataType: "json",//返回的数据类型格式
+          traditional: true,
+          beforeSend: function () {
+            document.getElementById('Chinese_userIn').value = "";
+            var parDiv = document.getElementById("Chinese_parent");
+            parDiv.innerHTML += '<article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article>';
+          }, //等待动画
+          success: function (data) {
+            // Change info for Model response
+            $('#load').remove();
+            var parDiv = document.getElementById("Chinese_parent");
+            // Change info for Model response
+
+            dialog_history.push(data.modelOut[0]);
+            parDiv.append(Chinese_createChatRow("Model", data.modelOut));
+            parDiv.scrollTo(0, parDiv.scrollHeight);
+          },
+          error: function () {
+            $('#load').remove();
+            alert("ERROR!");
+          }
+        })
       }
     });
   </script>
+
+
   <script>
     $(function () {
       $('a[href*=#]:not([href=#])').click(function () {
@@ -221,6 +543,8 @@
       });
     });
   </script>
+
+
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
