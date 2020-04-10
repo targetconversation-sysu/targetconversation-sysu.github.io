@@ -9,8 +9,6 @@
     <meta property="og:description" content="" />
     <meta property="og:site_name" content="TOC:Target-oriented Conversation" />
     <title>TOC: Target-oriented Conversation</title>
-    <script src="/static/js/vendor/jquery.js"></script>
-    <script src="/static/js/jquery-2.1.3.min.js"></script>
     <link rel="shortcut icon" href="/static/img/favicon2.png">
     <link rel="stylesheet" href="/static/css/foundation.css">
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
@@ -39,9 +37,14 @@
                     <li>
                         <a href="/papers">Papers</a>
                     </li>
-                    <li>
-                        <a href="/dataset">Dataset</a>
-                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Dataset
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="Medical.html">Medical Dialogue</a></li>
+                            <li><a href="TGODC.html">Target-Guided Open-Domain Conversation</a></li>
+                          </ul>
+                     </li>
                     <li>
                         <a href="/demo">Demo</a>
                     </li>
@@ -81,14 +84,11 @@
                 <div class="row">
                     <div class="large-12 columns"
                         style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
-                        <p style="margin: 0 0px 1em;font-size:15px; font-weight: 200;" align=justify>&emsp;Many
-                            practical open-domain dialogue applications have specific goals to achieve, e.g.,
-                            psychotherapy, education, recommendation.
-                            <br>&emsp;To bridge the gap between open-domain chit-chat and task-oriented dialogue, we
-                            propose a new task called **<b> target-guided open-domain conversation </b>**.
-                            Given a target and a starting utterance of the conversation, an agent is asked to
-                            chat with a user starting from an arbitrary topic, and proactively guide the conversation to
-                            the target.</p>
+                        <p style="margin: 0 0px 1em;font-size:15px; font-weight: 200;" align=justify>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Target-oriented dialogue is a branch of the dialogue system. 
+                            The whole round of dialogue is for a certain goal, such as medical
+                             consultation, or a topic to reach, etc.
+                            </p>
 
                     </div>
 
@@ -103,8 +103,67 @@
                 <div class="large-12 columns" style="margin-left:auto">
                     <p style="margin: -10px 0em 10px -0.8em;font-size:15px; font-weight: 200; " align=justify>&emsp;Details on
                         downloading the latest
-                        dataset may be found on the <a href="/dataset">dataset download webpage</a>.
-                        <br>&emsp;We have derived two keyword-augmented conversation datasets for the study:
+                        dataset are available on the dataset download webpage</a>.
+                    </p>
+                </div>
+                <div class="large-12 columns" style="margin-left:auto">
+                    <p style="margin: -10px 0em 10px -0.8em;font-size:15px; font-weight: 200; " align=justify>
+                        <br>&emsp;For <b>medical dialogue</b>, we have derived two <a href="Medical.html"
+                        style="color: blue;" target="_top"><b>datasets</b></a>:
+                    </p>
+                </div>
+                <div class="large-12 columns"
+                    style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                    <ul class="unilist">
+                        <li style="margin-left:2em">
+                            <a href="javascript:void(0)" id="covid"><span id="covid_plus" style="font-size:20px;"
+                                    class="unibull">&#8853;</span></a>
+                            <p style="margin: -20px 0 0em;font-size:14px;  display: inline;"
+                                align=justify><b style="color: red;"> [NEW] </b> CovidDialog-CH: Chinese Medical Dialogue Dataset for COVID19 Consultant  </p>
+                        </li>
+                    </ul>
+                    <div class="large-12 columns">
+                        <div class="row">
+                            <div class="large-12 columns" style="display: none;margin-left:2em;" id="covid_hiddenText">
+                                <ul style="font-size:13px; font-weight: 200; " align=justify>
+                                    <li>12789 consultations, each consultation has at least 8 senteces</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-5 columns">
+                    </div>
+                    <div class="large-4 columns" style="left: 40px;">
+                    </div>
+                </div>
+                <div class="large-12 columns"
+                    style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+                    <ul class="unilist">
+                        <li style="margin-left:2em">
+                            <a href="javascript:void(0)" id="dx_dataset"><span id="dx_dataset_plus" style="font-size:20px;"
+                                    class="unibull">&#8853;</span></a>
+                            <p style="margin: -20px 0 0em;font-size:14px;  display: inline;"
+                                align=justify>DX Medical Dialogue Dataset built from a Chinese online health-care community</p>
+                        </li>
+                    </ul>
+                    <div class="large-12 columns">
+                        <div class="row">
+                            <div class="large-12 columns" style="display: none;margin-left:2em;" id="dx_dataset_hiddenText">
+                                <ul style="font-size:13px; font-weight: 200; " align=justify>
+                                    <li>5 types of diseases, 41 symptoms</li>
+                                    <li>527 conversational data in total. 423 conversational data the training set, 104 for
+                                        testing </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-5 columns" style="left: 40px;">
+                    </div>
+                </div>
+                <div class="large-12 columns" style="margin-left:auto">
+                    <p style="margin: -10px 0em 10px -0.8em;font-size:15px; font-weight: 200; " align=justify>
+                        <br>&emsp;For <b>target-guided open-domain conversation</b>, we have derived two  <a href="TGODC.html"
+                        style="color: blue;" target="_top"><b>keyword-augmented conversation datasets</b></a>:
                     </p>
                 </div>
                 <div class="large-12 columns"
@@ -113,7 +172,7 @@
                         <li style="margin-left:2em">
                             <a href="javascript:void(0)" id="English"><span id="plus2" style="font-size:20px;"
                                     class="unibull">&#8853;</span></a>
-                            <p style="margin: -20px 0 0em;font-size:14px; font-weight: 600; display: inline;"
+                            <p style="margin: -20px 0 0em;font-size:14px;  display: inline;"
                                 align=justify>An English TGODC dataset from the persona-chat corpus</p>
                         </li>
                     </ul>
@@ -138,7 +197,7 @@
                         <li style="margin-left:2em">
                             <a href="javascript:void(0)" id="Chinese"><span id="plus1" style="font-size:20px;"
                                     class="unibull">&#8853;</span></a>
-                            <p style="margin: -20px 0 0em;font-size:14px; font-weight: 600; display: inline;"
+                            <p style="margin: -20px 0 0em;font-size:14px;  display: inline;"
                                 align=justify>A Chinese TGODC dataset from the Weibo corpus</p>
                         </li>
                     </ul>
@@ -154,6 +213,7 @@
                         </div>
                     </div>
                     <div class="large-5 columns" style="left: 40px;">
+                        <br>
                     </div>
                 </div>
             </div>
@@ -200,6 +260,20 @@
                 </div>
             </div>
             <hr>
+            <div class="large-12 columns">
+                <h1 style="font-size:30px; color:grey; font-weight: 200; text-align:left;margin-left:-0.05em;margin-bottom:0em;">
+                    License</h1><a rel="license" href="http://creativecommons.org/licenses/by/4.0/" >
+                    <img alt="Creative Commons Attribution 4.0 International License" style="border-width:0;margin-bottom:1em;margin-top:1em" 
+                    src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                    <h1 style="font-size:15px; font-weight: 100; text-align:left;margin-left:-0.05em">
+                        Target-oriented Conversation and this website are licensed under a 
+                    <a rel="license" 
+                    href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.
+                    </h1>
+                </a>.
+            </div>
+            
+            <hr>
         </div>
     </section>
     <script>
@@ -214,8 +288,17 @@
                 div1.style.display = 'block';
             }
         };
-    </script>
-    <script>
+        var button = document.getElementById('dx_dataset'); // Assumes element with id='button'
+        button.onclick = function () {
+            var div1 = document.getElementById('dx_dataset_hiddenText');
+            if (div1.style.display !== 'none') {
+                $("#dx_dataset_plus").html("&#8853");
+                div1.style.display = 'none';
+            } else {
+                $("#dx_dataset_plus").html("&#8854");
+                div1.style.display = 'block';
+            }
+        };
         var button = document.getElementById('English'); // Assumes element with id='button'
         button.onclick = function () {
             var div1 = document.getElementById('hiddenText22');
@@ -224,6 +307,17 @@
                 div1.style.display = 'none';
             } else {
                 $("#plus2").html("&#8854");
+                div1.style.display = 'block';
+            }
+        };
+        var button = document.getElementById('covid'); // Assumes element with id='button'
+        button.onclick = function () {
+            var div1 = document.getElementById('covid_hiddenText');
+            if (div1.style.display !== 'none') {
+                $("#covid_plus").html("&#8853");
+                div1.style.display = 'none';
+            } else {
+                $("#covid_plus").html("&#8854");
                 div1.style.display = 'block';
             }
         };
@@ -250,6 +344,8 @@
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
 
+    <script src="/static/js/vendor/jquery.js"></script>
+    <script src="/static/js/jquery-2.1.3.min.js"></script>
     <script>
         $(document).foundation();
     </script>

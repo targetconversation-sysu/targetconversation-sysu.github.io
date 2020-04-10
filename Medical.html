@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--Open Graph Related Stuff-->
+    <meta property="og:title" content="TOC:Target-oriented Conversation" />
+    <meta property="og:url" content="https://targetconversation-sysu.github.io/" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="TOC:Target-oriented Conversation" />
+    <title>TOC: Target-oriented Conversation</title>
+    <script src="/static/js/vendor/jquery.js"></script>
+    <script src="/static/js/jquery-2.1.3.min.js"></script>
+    <link rel="shortcut icon" href="/static/img/favicon2.png">
+    <link rel="stylesheet" href="/static/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.183a8f.css" media="screen,projection">
+
+</head>
+
+<body class="off-canvas hide-extras" style="min-height:500px;">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Target-oriented Conversation</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/papers">Papers</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Dataset
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Medical.html">Medical Dialogue</a></li>
+                            <li><a href="TGODC.html">Target-Guided Open-Domain Conversation</a></li>
+                        </ul>
+                    </li>
+                    <!--<li>
+                <a href="/evaluation">Evaluation</a>
+              </li>-->
+                    <li>
+                        <a href="/demo">Demo</a>
+                    </li>
+                    <li>
+                        <a href="/people">People</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://www.sysu.edu.cn/2012/cn/index.htm">
+                            <img style="height:25px;" src="/static/img/logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cmu.edu/">
+                            <img style="height:25px;" src="/static/img/cmu_logo.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section role="main" style="padding: 2em 0 1em; min-width:600px;">
+        <div class="row">
+            <h1 style="font-size:25px; color:grey; font-weight: 600; text-align:left;margin-top:0.05em;"><b
+                    style="color: red">[NEW] </b>CovidDialog-CH</h1>
+            <h1 style="font-size:20px; color:grey; font-weight: 200; text-align:left;margin-top:0.05em;">Readme</h1>
+            <div class="large-12 columns">
+                <p style="font-size:15px;  margin-left: -0.1em ;display: inline;" align=justify>
+                    &nbsp;&nbsp;&nbsp;&nbsp;We are collecting the COVID-19 Language-based AI research papers and
+                    datasets. If you have paper to
+                    recommend or any suggestions, please feel free to contact us.
+                </p>
+                <p style="font-size:15px; font-weight: 200; margin-left: -0.1em;display: inline;" align=justify>
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;We released a Chinese medical dialogue dataset (CovidDialog-CH)
+                    about
+                    COVID-19 and other
+                    types of pneumonia. Patients who are concerned that they may be infected by COVID-19 or other
+                    pneumonia consult doctors and doctors provide advice. There are 12789 consultations and each
+                    consultation has at least 8 senteces.
+
+                </p>
+                <div class="large-12 columns">
+                    <h1 style="font-size:15px; color:red; font-weight: 200; text-align:left;">
+                        <b>*Note: Our datasets are only for academic usage.</b></h1>
+                </div>
+
+                <br>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="row">
+            <h1 style="font-size:20px; color:grey; font-weight: 200; text-align:left;">Download</h1>
+            <div class="row">
+            </div>
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-12 columns" style="margin-top:-2em">
+                        <p style="font-size:15px; font-weight: 200; " align=justify>
+                            <br> &nbsp;&nbsp;&nbsp;&nbsp;The dataset is built from <a
+                                href="https://www.chunyuyisheng.com/">chunyu</a> and all copyrights of the data
+                            belong to <a href="https://www.chunyuyisheng.com/">chunyu</a> . It is available on the
+                            <a href="https://github.com/lwgkzl/Covid19-NLP" style="color:blue"><b>github page</b></a>
+                            now, welcome to download and use it!
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+        </div>
+        <!-- End of the download table thing -->
+        <div class="row">
+            <h1 style="font-size:20px; color:grey; font-weight: 200">Example</h1>
+            <div class="large-12 columns" style="text-align:center;">
+                <p style="font-size:15px; font-weight: 200; text-align:left;margin-left: -0.1em">
+                    The whole file is a python list, and each item in the list is a list of dictionary，as shown below:
+                    <br>
+                </p>
+                <p
+                    style="font-size:15px; font-weight: 200; border-style: solid;
+                border-width: 1px; text-align:left; padding:2em 2em 2em 2em;background-color: #f5f5f5;margin-left: 1em">
+                    <code>
+                        [{'id': 'dis', 'text': '医生您好！发烧两天，最高38.7，
+                        头痛，全身酸疼乏力，不咳嗽，不流涕，呼吸无异常。现已退烧，头痛基本消失，
+                        但是咽喉及中央气管略有灼烧疼，胸口两侧对称跳着疼，头顶头皮一处跳着疼，
+                        左腹一处偶尔也跳着疼，无力，不爱吃饭。无湖北接触史，偶尔外出去超市采购，
+                        都戴口罩。前段时间压力大，连续一周熬夜做文字工作。请问这是什么情况啊？
+                        是不是新冠肺炎？谢谢医生！（男，35岁）'}<br>
+                        {'id': 'doc', 'text': '您好！这种情况有多久了？'}<br>
+                        {'id': 'doc', 'text': '有没有鼻塞？'}<br>
+                        {'id': 'doc', 'text': '咳嗽？气喘？'}<br>
+                        {'id': 'dis', 'text': '三天了，前两天发烧头疼，今天不烧了'}<br>
+                        {'id': 'dis', 'text': '只在第一天晚上鼻塞过，不咳嗽，不气喘'}<br>
+                        {'id': 'doc', 'text': '咳嗽？'}<br>
+                        {'id': 'doc', 'text': '咳嗽？'}<br>
+                        {'id': 'doc', 'text': '胸痛？'}<br>
+                        {'id': 'doc', 'text': '应该是病毒性感冒'}<br>
+                        {'id': 'doc', 'text': '不像肺炎'}<br>
+                        {'id': 'doc', 'text': '建议多喝水，休息，按时吃感冒药
+                        如日夜百服宁片或泰诺感冒片，另外可吃些含片，清火的药如清开灵或熊胆胶囊等。'}<br>
+                        {'id': 'dis', 'text': '不咳嗽，胸口两侧对称地方跳着疼，头皮，左腹各有跳着疼'}<br>
+                        {'id': 'dis', 'text': '对了，退烧后，左嘴角上下起了一些疱疹'}<br>
+                        {'id': 'doc', 'text': '还是考虑病毒性感冒'}<br>
+                        {'id': 'dis', 'text': '病毒性感冒是不是传染？家里有孩子，请问怎样防护？'}<br>
+                        {'id': 'doc', 'text': '感冒会传染，'}<br>
+                        {'id': 'doc', 'text': '可以适当隔离，戴口罩'}<br>
+                        {'id': 'dis', 'text': '好的，谢谢医生！'}<br>
+                        {'id': 'doc', 'text': '不客气'}]<br>
+                    
+                </code></p>
+                <p style="font-size:15px; font-weight: 200; text-align:left;margin-left: -0.1em">
+                    The code for read "COVID_Dialogue_Dataset.pk":
+                    <br>
+                </p>
+                <p
+                    style="font-size:15px; font-weight: 200; border-style: solid;
+                border-width: 1px; text-align:left; padding:1em 2em 1em 2em;background-color: #f5f5f5;margin-left: 1em">
+                    <code>
+                        with open('COVID_Dialogue_Dataset1.pk','rb') as f:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;data = pickle.load(f)<br>
+                        data[0]
+                    
+                </code></p>
+                <br>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <h1 style="font-size:25px; color:grey; font-weight: 600; text-align:left;margin-top:0.05em;">
+                DX Medical Dialogue Dataset</h1>
+            <h1 style="font-size:20px; color:grey; font-weight: 200; text-align:left;margin-top:0.05em;">Readme</h1>
+            <div class="large-12 columns">
+                <p style="font-size:15px; font-weight: 200; margin-left: -0.1em" align=justify>
+                    &nbsp;&nbsp;&nbsp;&nbsp;The DX medical dialogue dataset is built for medical dialogue system,
+                    reserving the original self-reports and interaction utterances
+                    between doctors and patients.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;We annotate five types of diseases, including
+                    <i style="font-weight: 400;">allergic rhinitis, upper respiratory infection, pneumonia, children
+                        hand-foot-mouth disease</i>,
+                    and <i style="font-weight: 400;">pediatric diarrhea</i>. We
+                    extract the symptoms that appear in self-reports and conversation and normalize them into 41
+                    symptoms. Four annotators with medical background are invited to label the symptoms in both
+                    self-reports and raw conversations. Symptoms
+                    appearing in self-reports are regarded as explicit symptoms
+                    while the others are implicit symptoms. The diseases of each
+                    medical diagnosis conversation are labeled automatically.
+
+
+                </p>
+                <div class="large-12 columns">
+                    <h1 style="font-size:15px; color:red; font-weight: 200; text-align:left;">
+                        <b>*Note: Our datasets are only for academic usage.</b></h1>
+                </div>
+
+                <br>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="row">
+            <h1 style="font-size:20px; color:grey; font-weight: 200; text-align:left;">Download</h1>
+            <div class="row">
+            </div>
+            <div class="large-12 columns">
+                <div class="row">
+                    <div class="large-12 columns" style="margin-top:-2em">
+                        <p style="font-size:15px; font-weight: 200; " align=justify>
+                            <br> &nbsp;&nbsp;&nbsp;&nbsp;We collected data from
+                            <a href="https://dxy.com">a Chinese online health-care community </a>
+                            where users asking doctors for medical diagnosis or professional medical advice.
+                            Now the DX dataset is available in
+                            <a href="https://drive.google.com/file/d/19WrAIH1fyJ8BTdsahU-LycTsYnPhUt2n/view?usp=sharing"
+                                style="color:blue"><b>Google Could</b></a>
+                            , welcome to download and use it!
+
+                        </p>
+                        
+                        <div class="large-12 columns">
+                            <ul style="font-size:15px; font-weight: 200; " align=justify>
+                                <li><b>Data Statistics</b>: There are 527 conversational data in total. 423
+                                    conversational data are selected as the training set 104 for
+                                    testing. More detailed dataset statistics are shown in table: <br><br>
+                                    <table width="300px">
+                                        <tr>
+                                            <th>Disease</th>
+                                            <th>Quantity</th>
+                                            <th>Symptoms</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Allergic rhinitis</td>
+                                            <td>102</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Upper respiratory tract infection</td>
+                                            <td>122</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pneumonia</td>
+                                            <td>100</td>
+                                            <td>29</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Children hand-foot-mouth disease</td>
+                                            <td>101</td>
+                                            <td>22</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pediatric diarrhea</td>
+                                            <td>102</td>
+                                            <td>33</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <br>
+                                <li><b>Data Structure</b>: The DX dataset consists of the following three files:
+                                <br>
+                                <code>dxy_dialog_data_dialog_v2.pickle</code>: dialog data with user goals
+                                <br>
+                                <code>all_norm_symptoms.txt</code>: all normalized symptoms
+                                <br>
+                                <code>norm_symptom_list.txt</code>: the match of symptoms and their normalized one
+                                <br>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-63638588-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!-- jquery smooth scroll to id's -->
+        <script>
+            $(function () {
+                $('a[href*=#]:not([href=#])').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
