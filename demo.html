@@ -19,7 +19,7 @@
   <link rel="stylesheet" type="text/css" href="/static/css/main.183a8f.css" media="screen,projection">
 </head>
 
-<body class="off-canvas hide-extras" style="min-width:1000px; min-height:500px;">
+<body class="off-canvas hide-extras" style="min-width: 1000px; min-height: 500px;overflow: auto;">
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -68,15 +68,14 @@
       </div>
     </div>
   </div>
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script defer="" src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <div class="row">
   <div class="large-12 columns" style="margin-left:-3.2em">
     <h1 style="font-size:30px; color:grey; font-weight: 200;margin-top:1.2em;margin-left:1.8em">Instruction</h1>
   </div>
-  <div class="row" >
-    <div class="large-12 columns"
-      style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
-      <p style="margin: 0 4em 1em;font-size:15px; font-weight: 200;" align=justify>
+  <div class="row">
+    <div class="large-12 columns" style="-webkit-text-size-adjust:none; -ms-text-size-adjust:none; -moz-text-size-adjust:none; text-size-adjust:none;">
+      <p style="margin: 0 4em 1em;font-size:15px; font-weight: 200;" align="justify">
         &emsp;In this part, we put two videos below to show the process for using two versions of our demo.
         <br>&emsp;If you want to use our demo in the demonstration,
         please select or change the version, after that the bot will send the first message.
@@ -95,7 +94,7 @@
   <hr>
   <div class="row" style="margin-left:-3em">
     <div class="large-12 columns">
-      <h1 style="font-size:30px; color:grey; font-weight: 200;margin-left:2em" align=left>Video</h1>
+      <h1 style="font-size:30px; color:grey; font-weight: 200;margin-left:2em" align="left">Video</h1>
       <div class="auto-resizable-iframe">
         <div class="large-2 columns" style="margin-left: 0px;margin-top:4em;width: 400px;">
           <iframe frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/Chinese_Version"></iframe>
@@ -109,10 +108,10 @@
   <br>
   <hr>
   <h1 style="font-size:30px; color:grey; font-weight: 200;margin-left:0.8em">Demonstration</h1>
-  <div class="columns" style="height: 100%;">
-    <div class="column is-three-fifths is-offset-one-fifth">
-      <select class="form-control" id='chatbot_select'>
-        <option selected="selected" disabled="disabled" style='display: none' value='default'>Please select the chat
+  <div class="columns">
+    <div class="column">
+      <select class="form-control" id="chatbot_select" style="margin-left: 0.5em;">
+        <option selected="selected" disabled="disabled" style="display: none" value="default">Please select the chat
           bot
           version, Chinese and English are available.</option>
         <option value="The Chinese Version" style="font-size: 13px;color: #666666;">&nbsp;&nbsp;&nbsp;&nbsp;The
@@ -123,39 +122,21 @@
           Version</option>
       </select>
 
-      <section class="hero is-info is-large has-background-light has-text-grey-dark"
-        style="height: 100%;margin-top:2.5em;display: None;" id='English_chatbot'>
-        <div id="parent" class="hero-body"
-          style="overflow: auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0em;">
-          <article class="media">
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Instructions</strong>
-                  <br>
-                  Enter an English message, and the model will respond interactively.
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="hero-foot column is-three-fifths is-offset-one-fifth" style="height: 76px">
+      <section class="hero is-info is-large has-background-light has-text-grey-dark" style="height: 100%; margin-top: 2.5em; overflow: auto; display: none;" id="English_chatbot">
+        <div id="parent" class="hero-body" style="overflow: auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0em;"><article class="media"><div class="media-content"><div class="content"><p><strong>Instructions</strong><br>Enter an English message, and the model will respond interactively.</p></div></div></article><article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article></div>
+        <div class="hero-foot column is-three-fifths is-offset-one-fifth" style="overflow: auto;">
 
           <form id="interact">
             <div class="field is-grouped">
               <p class="control is-expanded">
-                <input for="userIn" style="font-size: 1em;margin-left: -11em;width: 42em;" class="input" type="text"
-                  name="userIn" id="userIn" placeholder="Type in an English message">
+                <input for="userIn" style="font-size: 1em;" class="input" type="text" name="userIn" id="userIn" placeholder="Type in an English message">
               </p>
               <p class="control">
-                <input id="respond" style="margin-left: -11em;padding-left: 2.8em;padding-right: 2.8em;"
-                  onclick="ajax_submit();" type="button" value="Send"
-                  class="button has-text-white-ter has-background-grey-dark">
-                </input>
+                <input id="respond" style="padding-left: 2.8em;padding-right: 2.8em;" onclick="ajax_submit();" type="button" value="Send" class="button has-text-white-ter has-background-grey-dark">
+                
               </p>
               <p class="control">
-                <button id="restart" style="margin-left: -4em;padding-left: 2.8em;padding-right: 2.8em;" type="reset"
-                  class="button has-text-white-ter has-background-grey-dark">
+                <button id="restart" style="padding-left: 2.8em;padding-right: 2.8em;" type="reset" class="button has-text-white-ter has-background-grey-dark">
                   Restart Conversation
                 </button>
               </p>
@@ -164,51 +145,34 @@
         </div>
       </section>
 
-      <section class="hero is-info is-large has-background-light has-text-grey-dark"
-        style="height: 100%;margin-top:2.5em;display: None;" id='Chinese_chatbot'>
-        <div id="Chinese_parent" class="hero-body"
-          style="overflow: auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0em;">
-          <article class="media">
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <strong>Instructions</strong>
-                  <br>
-                  Enter a Chinese message, and the model will respond interactively.
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div class="hero-foot column is-three-fifths is-offset-one-fifth" style="height: 76px">
+      <section style="height: 100%; margin-top: 2.5em; overflow: auto; display: none;" id="Chinese_chatbot" class="hero is-info is-large has-background-light has-text-grey-dark">
+        <div id="Chinese_parent" class="hero-body" style="overflow: auto; height: calc(100% - 76px); padding-top: 1em; padding-bottom: 0em;"><article class="media"><div class="media-content"><div class="content"><p><strong>Instructions</strong><br>Enter a Chinese message, and the model will respond interactively.</p></div></div></article><article id="load" class="media"><figure class="media-left"><span class="icon is-large"><svg class="svg-inline--fa fa-robot fa-w-20 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="robot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M0 256v128c0 17.7 14.3 32 32 32h32V224H32c-17.7 0-32 14.3-32 32zM464 96H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H176c-44.2 0-80 35.8-80 80v272c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V176c0-44.2-35.8-80-80-80zM256 416h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm128 120h-64v-32h64v32zm96 0h-64v-32h64v32zm-32-120c-22.1 0-40-17.9-40-40s17.9-40 40-40 40 17.9 40 40-17.9 40-40 40zm192-72h-32v192h32c17.7 0 32-14.3 32-32V256c0-17.7-14.3-32-32-32z"></path></svg><!-- <i class="fas fas fa-2x fa-robot"></i> --></span></figure><div class="media-content"><div class="content"><p><strong>Model</strong><br><img src="/static/img/load.gif" style="margin-top:-4em;margin-left:-4em;transform:scale(0.1)"></p></div></div></article></div>
+        <div class="hero-foot column is-three-fifths is-offset-one-fifth" style="overflow: auto;">
 
           <form id="Chinese_interact">
             <div class="field is-grouped">
               <p class="control is-expanded">
-                <input for="userIn" style="font-size: 1em;margin-left: -11em;width: 42em;" class="input" type="text"
-                  name="userIn" id="Chinese_userIn" placeholder="Type in a Chinese message">
+                <input for="userIn" style="font-size: 1em;" class="input" type="text" name="userIn" id="Chinese_userIn" placeholder="Type in a Chinese message">
               </p>
               <p class="control">
-                <input id="Chinese_respond" style="margin-left: -11em;padding-left: 2.8em;padding-right: 2.8em;"
-                  onclick="Chinese_ajax_submit();" type="button" value="Send"
-                  class="button has-text-white-ter has-background-grey-dark">
-                </input>
+                <input id="Chinese_respond" style="padding-left: 2.8em;padding-right: 2.8em;" onclick="Chinese_ajax_submit();" type="button" value="Send" class="button has-text-white-ter has-background-grey-dark">
+                
               </p>
               <p class="control">
-                <button id="Chinese_restart" style="margin-left: -4em;padding-left: 2.8em;padding-right: 2.8em;"
-                  type="reset" class="button has-text-white-ter has-background-grey-dark">
+                <button id="Chinese_restart" style="padding-left: 2.8em;padding-right: 2.8em;" type="reset" class="button has-text-white-ter has-background-grey-dark">
                   Restart Conversation
                 </button>
               </p>
             </div>
           </form>
         </div>
-      </section>
+      </section></div>
+      
 
     </div>
   </div>
   <br><br>
-</div>
+<br><br>
   <hr>
   <script type="text/javascript" language="javascript">
     var dialog_history = [];
@@ -573,6 +537,8 @@
 
   <script type="text/javascript" src="/static/js/jquery.min.js"></script>
   <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>
